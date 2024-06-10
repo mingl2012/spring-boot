@@ -7,11 +7,17 @@ plugins {
 repositories {
 	mavenCentral()
 	gradlePluginPortal()
-	maven { url "https://repo.spring.io/release" }
+	maven{url 'https://maven.aliyun.com/repository/gradle-plugin'}
+	maven{url 'https://maven.aliyun.com/repository/public/'}
+	maven{url 'https://maven.aliyun.com/repository/google/'}
+	maven{url 'https://maven.aliyun.com/repository/jcenter/'}
+//	maven { url "https://repo.spring.io/release" }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+//sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+//targetCompatibility = 1.8
 
 ext {
 	def propertiesFile = new File(new File("$projectDir").parentFile, "gradle.properties")
